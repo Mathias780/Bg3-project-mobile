@@ -27,7 +27,7 @@ body {
 
 
 /* media @ section */
-@media screen and (max-width:850px)  {
+@media screen and (max-width:850px)   {
     .header-content {
       display: none;
     }
@@ -74,67 +74,68 @@ body {
       cursor: pointer;
     }
 
-    /* -----We are trying something :)---- */
+    /* -----We are trying something--*/
     .carousel {
     position: relative;
     width: 100%;
     overflow: hidden;
     max-width: 700px;
     margin: 0 auto;
-}
+    }
 
-.carousel-track {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-}
+    .carousel-track {
+      display: flex;
+      transition: transform 0.5s ease-in-out;
+    }
 
-.races-icons {
-    display: flex;
-    justify-content: center;
-    flex: 0 0 100%;
-}
+    .races-icons {
+      display: flex;
+      justify-content: center;
+      flex: 0 0 100%;
+    }
 
-.image-races {
-    margin: 0 10px;
-}
+    .image-races {
+      margin: 0 10px;
+    }
 
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0,0,0,0.5);
-    color: white;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    padding: 5px 10px;
-    z-index: 10;
-}
+    .carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(0,0,0,0.5);
+      color: white;
+      border: none;
+      font-size: 1.5rem;
+      cursor: pointer;
+      padding: 5px 10px;
+      z-index: 10;
+    }
 
-.carousel-btn.prev {
-    left: 10px;
-}
+    .carousel-btn.prev {
+      left: 10px;
+    }
 
-.carousel-btn.next {
-    right: 10px;
+    .carousel-btn.next {
+      right: 10px;
 
-    
-}
+    }
+  }
 
 @media screen and (min-width:850px) {
-   .mobile-header {
+     .mobile-header {
     display: none;
    }
    .carousel-btn {
     display: none;
    }
-}
-
-  .image-container-two {
+    .image-container-two {
     width: 50%;
     margin-left: 4rem;
-  }
+    }
 }
+
+
+
 
 h1, h2, h3, a {
     color: #e5c07b;
