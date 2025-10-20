@@ -1,0 +1,603 @@
+@font-face {
+    font-family: "GothicA1 Regular";
+    src: url("../fonts/Gothic_A1/GothicA1-Regular.ttf");
+}
+@font-face {
+    font-family:"MedievalSharp Regular";
+    src: url("../fonts/MedievalSharp/MedievalSharp-Regular.ttf");
+}
+
+
+
+/* ---------- GLOBAL ---------- */
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+  background-color: #0a0a0a;
+  color: #e5c07b;
+  font-family: "GothicA1 Regular";
+  overflow-x: hidden;
+}
+
+
+/* media @ section */
+@media screen and (max-width:850px)  {
+    .header-content {
+      display: none;
+    }
+    .top-card {
+      flex-direction: column;
+    }
+    .main-cards-illustration {
+      flex-direction: column;
+    }
+    .container-buynow {
+      flex-direction: column;
+    }
+    .buynow-cards {
+      flex-wrap: wrap;
+    }
+    .container-news {
+      height: 100%;
+  
+      display: flex;
+      flex-direction: column;
+    }
+    .news-cards {
+      flex-direction: column; 
+      justify-content: center;
+      align-items: center;
+    }
+    .gallery-images {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+    .footer-flexbox {
+      flex-direction: column;
+    }
+    .footer-navigation-container {
+      flex-wrap: wrap;
+    }
+    .footer-infos-container {
+      padding-inline: 1rem;
+    }
+
+    .hamburger-menu:hover {
+      cursor: pointer;
+    }
+
+}
+
+@media screen and (min-width:850px) {
+   .mobile-header {
+    display: none;
+   }
+}
+
+  .image-container-two {
+    width: 50%;
+    margin-left: 4rem;
+  }
+
+
+h1, h2, h3, a {
+    color: #e5c07b;
+    font-family: "MedievalSharp Regular";
+}
+
+p {
+   color: #fff;
+}
+
+li a {
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+li a:hover {
+  color: #fff;
+}
+
+img {
+  max-width: 100%;
+}
+
+/* ---------- HEADER ---------- */
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.header-navigation {
+  max-width: 1300px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.header-image {
+  width: 150px;
+}
+.bigger {
+    margin-bottom: 0.5rem;
+}
+
+.list-header {
+  display: flex;
+  gap: 2rem;
+  list-style: none;
+}
+
+.list-header a {
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.btn-nav {
+  border: 1px solid #e5c07b;
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+}
+
+.btn-nav:hover {
+  background: #e5c07b;
+  color: #000;
+}
+
+/* ---------- HERO / FIRST SECTION ---------- */
+.first-section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  flex-direction: column;
+  text-align: center;
+  position: relative;
+  padding-top: 6rem;
+  overflow: hidden;
+}
+.buy-container {
+    position: relative; /* important for z-index of children */
+    width: 100%;
+    height: 100%;
+}
+
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    z-index: 0;
+}
+
+.content-buy {
+    margin-bottom: 10rem;
+    position: relative;
+    z-index: 1; /* in front of video */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    height: 100vh;
+}
+
+.first-section h2 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.first-section a {
+  display: inline-block;
+  border: 1px solid #e5c07b;
+  padding: 0.75rem 1.5rem;
+  color: #e5c07b;
+  font-weight: bold;
+  font-size: 2rem;
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.first-section a:hover {
+  background: #e5c07b;
+  color: #000;
+}
+
+/* ---------- AWARDS SECTION ---------- */
+.second-section {
+  background: url("../img/texture-bg.jpg") center/cover repeat;
+  padding: 6rem 0;
+  color: #e5c07b;
+  padding-inline: 1rem;
+}
+
+.top-card-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-block: 4rem;
+}
+
+.top-card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  border: 1px solid #5a4a28;
+  background: rgba(0, 0, 0, 0.6);
+  
+  max-width: 80%;
+}
+
+.top-card img {
+    width: 20%;
+    height: 100%;
+    object-fit: cover;
+    
+}
+
+.text-top-card {
+  text-align: center;
+}
+
+.text-top-card p {
+  font-size: 0.9rem;
+  letter-spacing: 2px;
+}
+
+.text-top-card h2 {
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+/* ---------- GAME RACES ---------- */
+
+.second-section {
+    background-image: url("../img/smoke-bg.jpg");
+    background-size: cover;
+}
+
+.main-content-illustration {
+  text-align: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.main-content-illustration h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+  letter-spacing: 2px;
+}
+
+.main-cards-illustration {
+  display: flex;
+  justify-content: space-between;
+  align-items: stretch;
+  gap: 3rem;
+}
+
+.illustration-card-one {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background-image: url("../img/races-bg.jpg");
+  padding: 1rem;
+  border: 1px solid #5a4a28;
+
+}
+
+.races-icons, .races-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.image-races {
+  padding: 0.5rem;
+  width: 25%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.illustration-card-two {
+  flex: 1;
+  border: 1px solid #5a4a28;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  
+}
+
+.elf-image-container img {
+  width: 70%;
+  margin-bottom: 1rem;
+}
+
+.elf-card-text h2 {
+  margin-bottom: 0.5rem;
+  color: #bd9573;
+  border-bottom: 1px solid #bd9573  ;
+  padding-bottom: 1rem;
+  display: inline-block; /* makes border only as wide as text */
+}
+
+.elf-card-text p {
+  font-size: 1rem;
+  color: #bd9573;
+  border-bottom: 1px solid #bd9573  ;
+  padding-block: 2rem;
+}
+
+/* ---------- BUY NOW SECTION ---------- */
+.third-section {
+  background: url("../img/buy-now-background.jpg") center/cover no-repeat;
+  color: #e5c07b;
+  padding: 8rem 0;
+  padding: 1rem;
+}
+
+.container-buynow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.buynow-image:hover {
+  cursor: pointer;
+}
+
+.buynow-title p {
+  font-size: 1rem;
+}
+
+.buynow-title h2 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.buynow-cards {
+  display: flex;
+  gap: 1rem;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  font-family: "MedievalSharp Regular";
+}
+
+.buynow-cards a {
+  border: 1px solid #e5c07b;
+  padding: 0.5rem 1rem;
+  background-color: rgb(9, 22, 35);
+}
+
+.buynow-cards a:hover {
+  background: #e5c07b;
+  color: #000;
+  cursor: pointer;
+}
+
+.buynow-paragraphe p {
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+/* ---------- NEWS SECTION ---------- */
+.fourth-section {
+  background-image: url("../img/smoke-bg.jpg");
+  background-size: cover;
+  color: #e5c07b;
+  padding: 6rem 0;
+  padding-inline: 1rem;
+}
+
+.container-news {
+  text-align: start;
+  margin-bottom: 5rem;
+  margin-inline: 2rem;
+}
+
+.news-cards {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.news-card {
+  width: 300px;
+  background: rgba(0, 0, 0, 0.6);
+  padding: 1.5rem;
+  border: 1px solid #5a4a28;
+  text-align: left;
+  transition: all 0.5s ease;
+}
+
+.news-card:hover {
+  transform: scale(1.05);
+  filter: brightness(150%);
+  cursor: pointer;
+}
+
+.background-one {
+    background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), /* overlay color */
+    url("../img/news-1.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.background-two {
+    background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), /* overlay color */
+    url("../img/news-2.jpg");
+    background-position: center;
+    background-size: cover;
+}
+.background-three {
+    background-image:  linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), /* overlay color */
+    url("../img/news-3.jpg");
+    background-position: center;
+    background-size: cover;
+}
+
+.news-card h3 {
+  margin-bottom: 1rem;
+}
+
+.news-card p {
+  font-size: 0.9rem;
+  margin-bottom: 1rem;
+}
+
+.news-card a {
+  font-size: 1rem;
+  text-decoration: none;
+}
+
+/* ---------- GALLERY ---------- */
+.container-community {
+  text-align: end;
+  margin-bottom: 5rem;
+  margin-inline: 2rem;
+}
+
+.gallery-container {
+  max-width: 1200px;
+  margin: 2rem auto;
+}
+
+.gallery-images {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.gallery-image img {
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  
+}
+
+.gallery-image img:hover {
+  border: 2px solid #5a4a28;
+  cursor: pointer;
+  filter: brightness(150%);
+}
+
+/* ---------- DOWNLOADS ---------- */
+.downloads-container {
+  text-align: start;
+  max-width: 800px;
+  margin: 0 auto;
+  background-image: url("../img/cta-bg.png");
+  background-size: cover;
+  border: 1px solid #e5c07b;
+  padding: 1rem;
+}
+
+.spacing-one {
+    margin-bottom: 2.8rem;
+    font-size: 1rem;
+}
+.spacing-two {
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.btn-downloads {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.75rem 2rem;
+  border: 1px solid #e5c07b;
+  color: #e5c07b;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.btn-downloads:hover {
+  background: #e5c07b;
+  color: #000;
+}
+
+/* ---------- FOOTER ---------- */
+footer {
+  background-image: url("../img/smoke-bg.jpg");
+  background-size: cover;
+  padding: 4rem 0;
+  color: #e5c07b;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.footer-flexbox {
+    display: flex;
+    gap: 3rem;
+    padding: 2rem;
+    border-bottom:1px solid #e5c07b;
+    border-top:  1px solid #e5c07b;;
+}
+
+.footer-navigation-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.footer-navigation h3 {
+  margin-bottom: 1rem;
+}
+
+footer h2 {
+    margin-block: 1.5rem;
+}
+
+.list-footer {
+  list-style: none;
+}
+
+.list-footer li {
+  margin-bottom: 0.5rem;
+}
+
+.footer-infos-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.list-footer-infos {
+  list-style: none;
+  display: flex;
+  justify-content: start;
+  gap: 2rem;
+}
